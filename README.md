@@ -4,7 +4,7 @@
 
 이 프로그램은 PlayStore의 MessengerBot 어플에서 실행가능한 코드입니다.
 
-카카오톡 아이디 : kdrbot
+화홍중학교 카카오톡 아이디 : kdrbot
 
 
 
