@@ -13,40 +13,40 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
     function reply(info, url) 
     { 
         if (url == null)
-            url = ""
+            url = "";
         else
-            url = "\n" + url    
-        replier.reply("[화홍중] '" + info + "' 입니다!" + url)
+            url = "\n" + url ;   
+        replier.reply("[화홍중] '" + info + "' 입니다!" + url);
     }
 
     // 에러 호출 함수
     function errmsg(cmd) 
     {
-        errstr = "'" + cmd + " 사용법' 을 입력해, 사용법을 알아보세요!"
+        errstr = "'" + cmd + " 사용법' 을 입력해, 사용법을 알아보세요!";
         if (cmd == "")
-            errstr = errstr.replace(" 사용법", "사용법")
+            errstr = errstr.replace(" 사용법", "사용법");
         else
-            errstr = errstr
+            errstr = errstr;
         replier.reply(errstr);
     }
 
     // 도움말 메세지
     function helpmsg(cmd, arr) 
     {
-        helpstr = ""
-        helpstr += cmd + " [사용법] 입니다!\n\n[옵션]"
+        helpstr = "";
+        helpstr += cmd + " [사용법] 입니다!\n\n[옵션]";
         for (var i=0; i<arr.length; i++)
         {
             helpstr += "\n  " + arr[i];
         }
-        helpstr += "\n\n사용법 -> " + cmd + " [옵션]"
-        replier.reply(helpstr)
+        helpstr += "\n\n사용법 -> " + cmd + " [옵션]";
+        replier.reply(helpstr);
     }
 
     // 변수
     msg = msg.trim()
     usage = "사용법"
-
+    
 
     // 화홍중학교 사이트(http://www.hwahong.ms.kr) 기준
     try 
@@ -136,7 +136,7 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
             else if (msg.indexOf("축하합니다") != -1) { reply("축하합니다", "http://www.hwahong.ms.kr/b_student3.brd?shell=/index.shell:260") }
             else if (msg.indexOf("상담실") != -1) { reply("상담실", "http://www.hwahong.ms.kr/b_student4.brd?shell=/index.shell:295") }
             else if (msg.indexOf("각종양식다운로드") != -1) { reply("각종양식다운로드", "http://www.hwahong.ms.kr/b_form.brd?shell=/index.shell:290") }
-            else { errmsg("/선생님마당") }
+            else { errmsg("/학생마당") }
         }
 
         else if (msg.indexOf("/학교혁신") == 0)
